@@ -20,7 +20,7 @@ Transformar ideias em soluções digitais úteis, com simplicidade, clareza e re
 
 ## 📞 Contato
 - 📱 **Telefone/WhatsApp:** [+244 936 543 024](https://wa.me/244936543024)
-- 📧 **Email:** *(colocar email quando criar)*
+- 📧 **Email:** *comercialpavsoftware@gmail.com*
 - 🌐 **Website:** *(em breve)*
 
 ---
