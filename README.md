@@ -19,7 +19,7 @@ Transformar ideias em soluções digitais úteis, com simplicidade, clareza e re
 ---
 
 ## 📞 Contato
-- 📱 **Telefone/WhatsApp:** [+244 951 752 335](https://wa.me/244936543024)
+- 📱 **Telefone/WhatsApp:** [+244 951 752 335](https://wa.me/244951752335)
 - 📧 **Email:** *comercialpavsoftware@gmail.com*
 - 🌐 **Website:** *(em breve)*
 

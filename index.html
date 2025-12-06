@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PavSoftware</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            montserrat: ['Montserrat', 'sans-serif'],
+            lora: ['Lora', 'serif']
+          },
+          colors: {
+            pavgold: '#d4af37',
+            pavdark: '#0a0a0a',
+            pavmid: '#1e1e1e'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    [data-animate] {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+    [data-animate].visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    body {
+      background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+    }
+
+    .glow-gold {
+      text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+    }
+      /* Altura consistente das imagens/vídeos dos projetos ta da bug porra... */
+  /* .project-media {
+  width: 100%;
+  height: 220px; 
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111; 
+}
+
+.project-media img,
+.project-media video {
+  width: auto;
+  height: 100%;
+  object-fit: contain; 
+  transition: opacity 0.5s ease;
+} */
+
+  .secod{
+  display: flex;
+  flex-direction: row-reverse;
+  }
+
+    .project-video {
+      transition: opacity 0.6s ease;
+    }
+
+    /* Swiper personalizado */
+    .swiper-button-next, .swiper-button-prev {
+      color: #d4af37 !important;
+    }
+    .swiper-pagination-bullet-active {
+      background: #d4af37 !important;
+    }
+  </style>
+</head>
+
+<body class="text-white font-montserrat">
+
+  <!-- HEADER -->
+  <header class="container mx-auto py-4 flex justify-between items-center absolute top-0 left-0 right-0 px-6 md:px-10 z-50">
+    <div class="flex items-center gap-3">
+      <img src="assets/img/PavSoftwareLogo.png" alt="Logo" class="h-14 rounded-full border border-[#d4af37]/30">
+      <h1 class="text-2xl font-bold text-[#d4af37] glow-gold">PavSoftware</h1>
+    </div>
+
+    <button id="menu-btn" class="text-white text-3xl md:hidden"><i class="bi bi-list"></i></button>
+
+    <nav class="hidden md:flex gap-6 text-lg">
+      <a href="#hero" class="hover:text-[#d4af37] transition">Home</a>
+      <a href="#about" class="hover:text-[#d4af37] transition">About</a>
+      <a href="#projects" class="hover:text-[#d4af37] transition">Projects</a>
+      <a href="#gallery" class="hover:text-[#d4af37] transition">Gallery</a>
+      <a href="#testimonials" class="hover:text-[#d4af37] transition">Testimonials</a>
+      <a href="#contact" class="hover:text-[#d4af37] transition">Contact</a>
+    </nav>
+  </header>
+<!-- FIM HEADER -->
+  <!-- HERO -->
+  <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center px-6 md:px-12 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-[#111111]/80 to-[#0a0a0a] -z-10"></div>
+    <h3 data-animate class="text-lg md:text-xl font-lora text-gray-300 tracking-widest">INOVAÇÃO • TECNOLOGIA • ELEGÂNCIA</h3>
+    <h1 data-animate class="text-4xl md:text-6xl font-extrabold text-[#d4af37] mt-4 glow-gold">Transformamos Ideias em Código</h1>
+    <p data-animate class="text-gray-300 text-lg md:text-xl mt-6 max-w-2xl leading-relaxed">
+      Na PavSoftware, criamos soluções digitais sob medida que combinam performance, design e inovação.  
+      Levamos tua ideia ao próximo nível com tecnologia de ponta e estética refinada.
+    </p>
+    <div data-animate class="mt-10">
+      <a href="#" class="bg-[#d4af37] hover:bg-[#b8962e] text-black px-10 py-3 rounded-full font-semibold flex items-center gap-3 transition">
+        <i class="bi bi-whatsapp text-2xl"></i> Fale Conosco
+      </a>
+    </div>
+  </section>
+<!-- FIM HERO -->
+  <!-- ABOUT -->
+  <section id="about" class="min-h-screen flex flex-col justify-center items-center px-6 md:px-12 py-20 text-center">
+    <h2 data-animate class="text-4xl md:text-5xl font-bold text-[#d4af37] glow-gold mb-8">Sobre Nós</h2>
+    <p data-animate class="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed mb-12">
+      A PavSoftware é uma startup que une inovação e estética para desenvolver softwares, aplicações web e mobile com excelência técnica e impacto real.  
+      Nosso foco é entregar experiências digitais de alto nível que geram valor para os nossos clientes.
+    </p>
+
+    <div data-animate class="relative w-full md:w-[600px] h-[400px] mx-auto">
+      <canvas id="skillsChart"></canvas>
+    </div>
+  </section>
+<!-- FIM ABOUT -->
+  <!-- PROJECTS -->
+  <section id="projects" class="min-h-screen flex flex-col justify-center items-center px-6 md:px-12 py-20 bg-[#111111]">
+    <h2 data-animate class="text-4xl md:text-5xl font-bold text-[#d4af37] glow-gold mb-8">Nossos Projetos</h2>
+    <p data-animate class="text-gray-300 text-lg md:text-xl text-center max-w-2xl mb-16">
+      Projetos que refletem nossa paixão por design, performance e tecnologia.  
+      Passe o mouse para ver a transformação.
+    </p>
+
+    <div class="container mx-auto flex flex-col gap-16">
+      <!-- Gerado pelo JS -->
+    </div>
+  </section>
+<!-- FIM PROJECTS -->
+  <!-- GALLERY -->
+  <section id="gallery" class="min-h-screen flex flex-col">
+    <h2 data-animate class="text-4xl md:text-5xl font-bold text-[#d4af37] glow-gold mb-8 text-center mt-20">Galeria</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-6 md:px-12">
+      <img data-animate src="assets/img/gallery/galler1.png" class="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition-transform">
+      <img data-animate src="assets/img/gallery/galler4.png" class="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition-transform">
+      <img data-animate src="assets/img/gallery/gallery3.png" class="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition-transform">
+      <img data-animate src="assets/img/gallery/gallery5.png" class="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition-transform">
+      <img data-animate src="assets/img/gallery5.jpg" class="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition-transform">
+      <img data-animate src="assets/img/gallery6.jpg" class="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition-transform">
+    </div>
+  </section>
+<!-- FIM GALLERY -->
+  <!-- TESTIMONIALS COM SWIPER -->
+ <section id="testimonials" class="min-h-screen flex flex-col items-center justify-center px-6 md:px-12 py-20">
+  <h2 data-animate class="text-4xl md:text-5xl font-bold text-[#d4af37] glow-gold mb-12 text-center">
+    Depoimentos
+  </h2>
+
+  <div class="swiper w-full max-w-6xl">
+    <div class="swiper-wrapper" id="testimonialWrapper">
+      <!-- Os slides serao metdios aqui via js-->
+    </div>
+
+    <!-- Botões e paginação -->
+    <div class="swiper-button-prev text-[#d4af37]"></div>
+    <div class="swiper-button-next text-[#d4af37]"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+  <!-- FIM TESTIMONIALS -->
+  <!-- CONTACT SECTION -->
+<section id="contact" class="min-h-screen flex flex-col justify-center items-center px-6 md:px-12 py-20 bg-[#111111]">
+  <h2 data-animate class="text-4xl md:text-5xl font-bold text-[#d4af37] glow-gold mb-8 text-center">
+    Contato
+  </h2>
+
+  <div class="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-12 mt-8">
+    <!-- LADO ESQUERDO -->
+    <div data-animate class="flex flex-col justify-center items-start space-y-6">
+      <h3 class="text-2xl font-semibold text-[#d4af37]">Fale Conosco</h3>
+      <p class="text-gray-300 leading-relaxed">
+        Pronto para transformar sua ideia em realidade?  
+        Entre em contato conosco e vamos criar algo incrível juntos!
+      </p>
+
+      <!-- CONTACT INFO -->
+      <div class="text-gray-300">
+        <p class="flex items-center gap-2">
+          <i class="bi bi-telephone text-[#d4af37] text-xl"></i>
+          <span>+244 951 752 335</span>
+        </p>
+        <p class="flex items-center gap-2 mt-2">
+          <i class="bi bi-envelope text-[#d4af37] text-xl"></i>
+          <span>contato@pavsoftware.com</span>
+        </p>
+      </div>
+
+      <!-- SOCIAL ICONS -->
+      <div class="flex items-center gap-5 mt-4">
+        <a href="#" target="_blank" class="text-gray-400 hover:text-[#d4af37] transition">
+          <i class="bi bi-github text-3xl"></i>
+        </a>
+        <a href="#" target="_blank" class="text-gray-400 hover:text-[#d4af37] transition">
+          <i class="bi bi-instagram text-3xl"></i>
+        </a>
+        <a href="#" target="_blank" class="text-gray-400 hover:text-[#d4af37] transition">
+          <i class="bi bi-youtube text-3xl"></i>
+        </a>
+        <a href="#" target="_blank" class="text-gray-400 hover:text-[#d4af37] transition">
+          <i class="bi bi-facebook text-3xl"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- LADO DIREITO (FORMULÁRIO) -->
+    <form data-animate action="mailto:contato@pavsoftware.com" method="POST" enctype="text/plain"
+      class="bg-[#1a1a1a]/70 p-8 rounded-2xl shadow-lg flex flex-col gap-6">
+      <div>
+        <label class="block text-gray-300 mb-2 font-medium">Nome</label>
+        <input type="text" name="nome" required
+          class="w-full p-3 rounded-lg bg-[#111111] text-gray-200 border border-[#333] focus:border-[#d4af37] focus:outline-none">
+      </div>
+      <div>
+        <label class="block text-gray-300 mb-2 font-medium">Email</label>
+        <input type="email" name="email" required
+          class="w-full p-3 rounded-lg bg-[#111111] text-gray-200 border border-[#333] focus:border-[#d4af37] focus:outline-none">
+      </div>
+      <div>
+        <label class="block text-gray-300 mb-2 font-medium">Mensagem</label>
+        <textarea name="mensagem" rows="5" required
+          class="w-full p-3 rounded-lg bg-[#111111] text-gray-200 border border-[#333] focus:border-[#d4af37] focus:outline-none"></textarea>
+      </div>
+      <button type="submit"
+        class="bg-[#d4af37] hover:bg-[#b8962e] text-black font-semibold py-3 rounded-full transition">
+        Enviar Mensagem
+      </button>
+    </form>
+  </div>
+</section>
+<!-- FIM CONTACT SECTION -->
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0a0a0a] py-10 text-center border-t border-[#d4af37]/20">
+    <p class="text-gray-400">© 2025 PavSoftware — Inovando com elegância.</p>
+  </footer>
+
+
+
+
+  <!-- SCRIPTS -->
+  
+<script>
+  // Lista de depoimentos
+  const testimonials = [
+    {
+      nome: "João Silva",
+      cargo: "CEO da TechCorp",
+      img: "assets/img/testimonial1.webp",
+      texto: "A PavSoftware transformou nossa visão em realidade com um software que superou todas as expectativas."
+    },
+    {
+      nome: "Maria Oliveira",
+      cargo: "Fundadora da AppSolutions",
+      img: "assets/img/testimonial2.webp",
+      texto: "O aplicativo desenvolvido pela PavSoftware melhorou significativamente a experiência dos nossos usuários."
+    },
+    {
+      nome: "Carlos Mendes",
+      cargo: "Diretor de TI da GlobalTech",
+      img: "assets/img/testimonial3.webp",
+      texto: "Excelente comunicação e comprometimento. A PavSoftware entregou um produto sólido e elegante."
+    },
+    {
+      nome: "Beatriz Lopes",
+      cargo: "Gerente de Projetos da NextVision",
+      img: "assets/img/testimonial4.webp",
+      texto: "Profissionalismo e criatividade em cada detalhe. Recomendo de olhos fechados."
+    }
+  ];
+
+  // Container do Swiper
+  const wrapper = document.getElementById('testimonialWrapper');
+
+  // Geração automática dos slides
+  testimonials.forEach(t => {
+    const slide = document.createElement('div');
+    slide.className = "swiper-slide bg-[#1a1a1a]/70 p-8 rounded-2xl shadow-lg flex flex-col items-center text-center";
+
+    slide.innerHTML = `
+      <img src="${t.img}" alt="${t.nome}" class="w-20 h-20 rounded-full mb-4 border-2 border-[#d4af37] shadow-lg object-cover">
+      <p class="text-gray-300 italic mb-4">"${t.texto}"</p>
+      <h4 class="text-[#d4af37] font-bold">— ${t.nome}, ${t.cargo}</h4>
+    `;
+    wrapper.appendChild(slide);
+  });
+
+  // Inicialização do Swiper
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    grabCursor: true,
+    spaceBetween: 30,
+    breakpoints: {
+      320: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 },
+    },
+  });
+</script>
+
+  <script>
+    const animatedElements = document.querySelectorAll('[data-animate]');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.2 });
+    animatedElements.forEach(el => observer.observe(el));
+  </script>
+
+  <script>
+    const projects = [
+      {
+        title: "Sistema de Gestão Empresarial",
+        description: "Plataforma full-stack para administração, vendas e estoque, com dashboard dinâmico e relatórios em tempo real.",
+        imageUrl: "assets/img/project1.png",
+        videoUrl: "assets/video/project1.webm",
+        git: "#",
+        site: "#"
+      },
+      {
+        title: "Aplicativo Mobile de Entregas",
+        description: "App híbrido com rastreio em tempo real e interface otimizada para desempenho e experiência do usuário.",
+        imageUrl: "assets/img/project2.png",
+        videoUrl: "assets/video/project2.webm",
+        git: "#",
+        site: "#"
+      },
+      {
+        title: "Website Corporativo Premium",
+        description: "Site institucional elegante e responsivo com integração de API e sistema de contato automatizado.",
+        imageUrl: "assets/img/project3.png",
+        videoUrl: "assets/video/project3.webm",
+        git: "#",
+        site: "#"
+      }
+    ];
+
+    const container = document.querySelector('#projects .container');
+
+    projects.forEach(p => {
+  const card = document.createElement('div');
+ if (projects.indexOf(p) % 2 !== 0) {
+    card.className =
+      "flex flex-col md:flex-row-reverse items-center gap-8 bg-[#1a1a1a]/70 p-8 rounded-2xl shadow-lg hover:shadow-[#d4af37]/20 transition";
+  } else 
+  card.className =
+    "flex flex-col md:flex-row items-center gap-8 bg-[#1a1a1a]/70 p-8 rounded-2xl shadow-lg hover:shadow-[#d4af37]/20 transition";
+
+  card.innerHTML = `
+    <div class="relative md:w-1/2 flex flex-col justify-center items-center bg-[#111] rounded-xl overflow-hidden group">
+      <!-- Imagem -->
+      <img src="${p.imageUrl}" alt="${p.title}" 
+          class="max-h-[300px] w-full object-contain transition-opacity duration-500 group-hover:opacity-0">
+
+      <!-- Vídeo -->
+      <video autoplay muted loop playsinline 
+            class="absolute top-0 left-0 w-full h-full object-contain opacity-0 group-hover:opacity-50 rounded-xl">
+        <source src="${p.videoUrl}" type="video/webm">
+      </video>
+
+      <!-- Ícones abaixo da imagem/vídeo -->
+      <div class="flex gap-6 justify-center py-3 bg-[#111] z-10 w-full">
+        <a href="${p.git}" target="_blank" class="text-white text-2xl hover:text-[#d4af37] transition-colors">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="${p.site}" target="_blank" class="text-white text-2xl hover:text-[#d4af37] transition-colors">
+          <i class="bi bi-display"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="md:w-1/2 text-left">
+      <h3 class="text-2xl font-bold text-[#d4af37] mb-3">${p.title}</h3>
+      <p class="text-gray-300 mb-5 leading-relaxed">${p.description}</p>
+      <a href="#" class="bg-[#d4af37] hover:bg-[#b8962e] text-black px-8 py-2 rounded-full font-semibold transition whitespace-nowrap text-sm md:text-base">
+        Queres algo semelhante? Puxe
+      </a>
+    </div>
+  `;
+
+  container.appendChild(card);
+});
+
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('skillsChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'radar',
+      data: {
+        labels: ['Web', 'Mobile', 'Desktop', 'UX/UI', 'Segurança', 'Performance'],
+        datasets: [{
+          label: 'Habilidades PavSoftware',
+          data: [95, 92, 85, 88, 90, 93],
+          backgroundColor: 'rgba(212,175,55,0.2)',
+          borderColor: '#d4af37',
+          pointBackgroundColor: '#fff'
+        }]
+      },
+      options: {
+        plugins: { legend: { labels: { color: '#fff' } } },
+        scales: { r: { grid: { color: '#555' }, pointLabels: { color: '#fff' }, ticks: { display: false } } }
+      }
+    });
+  </script>
+</body>
+</html>
