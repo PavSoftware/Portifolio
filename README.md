@@ -17,6 +17,7 @@ Criamos soluções digitais simples e funcionais, com foco em **web** e **automa
 Transformar ideias em soluções digitais úteis, com simplicidade, clareza e resultados.
 
 ---
+jTdvXK&@3_K+?UV
 
 ## 📞 Contato
 - 📱 **Telefone/WhatsApp:** [+244 951 752 335](https://wa.me/244951752335)
