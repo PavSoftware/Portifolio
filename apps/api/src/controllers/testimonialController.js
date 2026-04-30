@@ -1,4 +1,5 @@
 import { Testimonial } from '../models/index.js';
+import { uploadFileToSupabase } from '../services/supabaseService.js';
 
 export const getTestimonials = async (req, res) => {
   try {
@@ -11,9 +12,19 @@ export const getTestimonials = async (req, res) => {
 
 export const createTestimonial = async (req, res) => {
   try {
+    let avatarUrl = null;
+    if (req.file) {
+      avatarUrl = await uploadFileToSupabase(
+        req.file.buffer,
+        req.file.originalname,
+        req.file.mimetype,
+        'testimonials-images'
+      );
+    }
+
     const data = {
       ...req.body,
-      avatarUrl: req.file ? `/uploads/${req.file.filename}` : null
+      avatarUrl
     };
     const testimonial = await Testimonial.create(data);
     res.status(201).json({ success: true, data: testimonial });

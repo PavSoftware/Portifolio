@@ -1,4 +1,5 @@
 import { Gallery } from '../models/index.js';
+import { uploadFileToSupabase } from '../services/supabaseService.js';
 
 export const getGallery = async (req, res) => {
   try {
@@ -13,8 +14,15 @@ export const uploadImage = async (req, res) => {
   try {
     if (!req.file) return res.status(400).json({ success: false, message: 'No image uploaded' });
     
+    const imageUrl = await uploadFileToSupabase(
+      req.file.buffer,
+      req.file.originalname,
+      req.file.mimetype,
+      'gallery-images'
+    );
+
     const image = await Gallery.create({
-      imageUrl: `/uploads/${req.file.filename}`,
+      imageUrl,
       caption: req.body.caption
     });
     res.status(201).json({ success: true, data: image });
