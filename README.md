@@ -1,66 +1,69 @@
-# PavSoftware Full-Stack Portfolio
+# PavSoftware Portfólio Full-Stack
 
-A modern, high-performance portfolio platform built with React, Node.js, and PostgreSQL.
+Uma plataforma de portfólio moderna e de alto desempenho, construída com React, Node.js e PostgreSQL.
 
-## Architecture
-- **Monorepo**: Managed with NPM Workspaces.
+---
+
+## 🏗️ Arquitetura
+
+- **Monorepo**: Gerido com NPM Workspaces.
 - **Frontend**: React 18, Vite, Tailwind CSS v4, Framer Motion, Lucide React.
 - **Backend**: Node.js, Express, Sequelize ORM, PostgreSQL.
-- **Database**: PostgreSQL with Sequelize migrations/sync.
-- **Auth**: JWT Authentication with protected routes.
+- **Base de Dados**: PostgreSQL com migrations/sync do Sequelize.
+- **Autenticação**: JWT com rotas protegidas.
 
-## Project Structure
-```
+---
+
+## 📁 Estrutura do Projeto
+
+```bash
 apps/
-  web/          # React + Vite Frontend
-  api/          # Node + Express API
+  web/          # Frontend React + Vite
+  api/          # API Node + Express
 ```
-
-## Setup Instructions
-
-### Prerequisites
-- Node.js (v18+)
-- PostgreSQL
-
-### Installation
-1. Clone the repository
-2. Install dependencies for all apps:
-   ```bash
-   npm install
-   ```
-
-### Configuration
-1. Create a `.env` file in `apps/api/` and `apps/web/` based on the `.env.example` (to be created).
-
-**API .env:**
-```env
+⚙️ Instruções de Setup
+📌 Pré-requisitos
+Node.js (v18+)
+PostgreSQL
+📥 Instalação
+Clonar o repositório
+Instalar dependências em todas as aplicações:
+npm install
+🔧 Configuração
+Criar um ficheiro .env em apps/api/ e apps/web/ baseado no .env.example.
+API .env
 PORT=5000
 DB_NAME=portfolio
 DB_USER=postgres
 DB_PASS=yourpassword
 DB_HOST=localhost
 JWT_SECRET=your_jwt_secret
-```
+🚀 Execução Local
 
-### Running Locally
-To run both frontend and backend concurrently:
-```bash
+Para executar frontend e backend em simultâneo:
+
 npm run dev
-```
 
-Or individually:
-- Frontend: `npm run dev:web`
-- Backend: `npm run dev:api`
+Ou separadamente:
 
-## Features
-- **Dynamic Portfolio**: Manage projects via Admin Dashboard.
-- **Gallery**: Dynamic image grid.
-- **Testimonials**: Customer feedback management.
-- **Admin Panel**: Full CRUD for all resources.
-- **Premium Design**: Dark mode fintech aesthetic with smooth animations.
-- **Responsive**: Mobile-first approach.
+Frontend:
+npm run dev:web
+Backend:
+npm run dev:api
+✨ Funcionalidades
+📊 Portfólio Dinâmico (gestão de projetos via admin)
+🖼️ Galeria de imagens dinâmica
+💬 Sistema de testemunhos (feedback de clientes)
+🛠️ Painel Admin completo (CRUD)
+🎨 Design premium com dark mode estilo fintech
+📱 Totalmente responsivo (mobile-first)
+⚡ Animações suaves com Framer Motion
+👨‍💻 Autor
 
-- **Desenvolvido por**: [Pavlov Claymor](https://github.com/pavlovclaymor)
+Desenvolvido por PavSoftware
 
-## License
+GitHub: https://github.com/pavlovclaymor
+
+📄 Licença
+
 MIT
