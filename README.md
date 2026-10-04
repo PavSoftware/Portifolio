@@ -29,8 +29,8 @@ apps/
    npm install
    ```
 
-### Configuration
-1. Create a `.env` file in `apps/api/` and `apps/web/` based on the `.env.example` (to be created).
+
+
 
 **API .env:**
 ```env
