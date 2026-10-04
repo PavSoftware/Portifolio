@@ -1,0 +1,21 @@
+{
+  "name": "pav-portfolio-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Full-stack modern portfolio for PavSoftware",
+  "main": "index.js",
+  "type": "module",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev -w web",
+    "dev:api": "npm run dev -w api",
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:web\"",
+    "build:web": "npm run build -w web",
+    "install:all": "npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
